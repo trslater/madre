@@ -2,7 +2,7 @@ from dataclasses import dataclass
 from functools import cached_property
 from pathlib import Path
 from typing import Union
-from urllib.parse import urlparse
+from urllib.parse import urlsplit
 
 import markdown
 
@@ -57,7 +57,7 @@ class Document:
         if isinstance(html_dir, str):
             html_dir = Path(html_dir)
 
-        rel_path = urlparse(url).path
+        rel_path = urlsplit(url).path
         
         # If starts with '/', remove it
         if rel_path and rel_path[0] == "/":
