@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Union
 from urllib.parse import urlsplit
 
-import markdown
+from markdown import markdown
 
 
 @dataclass(frozen=True)
@@ -24,9 +24,9 @@ class Document:
 
     @cached_property
     def html_str(self) -> str:
-        return markdown.markdown(self.md_str,
-                                 output_format="html5",
-                                 tab_length=2)
+        return markdown(self.md_str,
+                        output_format="html5",
+                        tab_length=2)
 
     @classmethod
     def from_file(cls,
