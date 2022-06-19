@@ -1,9 +1,9 @@
-# MDNB: Markdown Notebook
+# Madre: MArkDown REader
 
-A single command, no-config markdown notebook SSG and dev server.
+A single command, no-config markdown SSG and dev server.
 
 ## Documentation
 
 ```
-pdoc -d restructuredtext mdnb
+pdoc -d restructuredtext madre
 ```
